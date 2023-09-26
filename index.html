@@ -15,33 +15,32 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
-
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-md-9">
+              <div class="col-9">
                 <input
                   type="search"
-                  placeholder="search city 🔎"
+                  placeholder="Type a city.."
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
                 />
               </div>
-              <div class="col-md-3">
+              <div class="col-3">
                 <input
                   type="submit"
                   value="Search"
-                  class="btn btn-success w-100"
+                  class="btn btn-primary w-100"
                 />
               </div>
             </div>
           </form>
           <div class="overview">
-            <h1 id="city">new york</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Last updated: <span id="date"></span></li>
               <li id="description"></li>
@@ -53,10 +52,7 @@
                 <img src="" alt="Clear" id="icon" class="float-left" />
                 <div class="float-left">
                   <strong id="temperature"></strong
-                  ><span class="units"
-                    ><a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a></span
-                  >
+                  ><span class="units"> °C</span>
                 </div>
               </div>
             </div>
@@ -67,32 +63,18 @@
               </ul>
             </div>
           </div>
-          <div class="weather-forecast" id="weather-forecast">
-            <div class="row">
-              <div class="col-2">
-                <div class="weather-forecast-date">Thu</div>
-                <img
-                  src="http://openweathermap.org/img/wn/50d@2x.png"
-                  alt=""
-                  width="42"
-                />
-                <div class="weather-forecast-temperatures">
-                  <span class="weather-forecast-temperature-max"> 18° </span>
-                  <span class="weather-forecast-temperature-min"> 12° </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
-      </div>
-    </div>
-    <footer>
+        <small>
+          <a
       This project was coded by Elvina Starkova
 
       <a href="https://github.com/Elvin4ik/Vanilla"
         >open sourced on GitHub</a
       >
-    </footer>
-    <script src="src/script.js"></script>
+    </small>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
   </body>
 </html>
